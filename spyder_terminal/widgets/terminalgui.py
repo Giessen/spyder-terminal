@@ -208,7 +208,7 @@ class TermView(WebView):
 
             sequence = QKeySequence(key).toString(QKeySequence.PortableText)
 
-            if sequence == 'Ctrl+Shift+T':
+            if sequence == 'Ctrl+Alt+Shift+T':
                 event.ignore()
                 return False            
             elif sequence == 'Ctrl+Shift+C':
