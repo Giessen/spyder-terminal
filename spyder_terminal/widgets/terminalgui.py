@@ -127,6 +127,7 @@ class TermView(WebView):
         """Webview main constructor."""
         WebView.__init__(self, parent)
         self.parent = parent
+        '''
         self.copy_action = create_action(self, _("Copy text"),
                                          icon=ima.icon('editcopy'),
                                          triggered=self.copy,
@@ -135,6 +136,7 @@ class TermView(WebView):
                                           icon=ima.icon('editpaste'),
                                           triggered=self.paste,
                                           shortcut='Ctrl+Shift+V')
+        '''
         if WEBENGINE:
             self.channel = QWebChannel(self.page())
             self.page().setWebChannel(self.channel)
@@ -206,13 +208,15 @@ class TermView(WebView):
 
             sequence = QKeySequence(key).toString(QKeySequence.PortableText)
 
-            if sequence == 'Ctrl+Alt+Shift+T':
+            if sequence == 'Ctrl+Shift+T':
                 event.ignore()
                 return False
+            '''
             elif sequence == 'Ctrl+Shift+C':
                 self.copy()
             elif sequence == 'Ctrl+Shift+V':
                 self.paste()
+            '''
             event.accept()
             return True
 
