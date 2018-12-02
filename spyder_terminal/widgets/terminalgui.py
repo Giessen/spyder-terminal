@@ -126,12 +126,12 @@ class TermView(WebView):
                  handler=None):
         """Webview main constructor."""
         WebView.__init__(self, parent)
-        self.parent = parent
-        '''
+        self.parent = parent        
         self.copy_action = create_action(self, _("Copy text"),
                                          icon=ima.icon('editcopy'),
                                          triggered=self.copy,
                                          shortcut='Ctrl+Shift+C')
+        '''
         self.paste_action = create_action(self, _("Paste text"),
                                           icon=ima.icon('editpaste'),
                                           triggered=self.paste,
@@ -210,10 +210,10 @@ class TermView(WebView):
 
             if sequence == 'Ctrl+Shift+T':
                 event.ignore()
-                return False
-            '''
+                return False            
             elif sequence == 'Ctrl+Shift+C':
                 self.copy()
+            '''
             elif sequence == 'Ctrl+Shift+V':
                 self.paste()
             '''

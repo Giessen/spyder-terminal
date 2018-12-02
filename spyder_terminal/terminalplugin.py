@@ -129,7 +129,7 @@ class TerminalPlugin(SpyderPluginWidget):
         layout.addWidget(self.tabwidget)
         self.setLayout(layout)
 
-        new_term_shortcut = QShortcut(QKeySequence("Ctrl+Alt+Shift+T"),
+        new_term_shortcut = QShortcut(QKeySequence("Ctrl+Shift+T"),
                                       self, self.create_new_term)
         new_term_shortcut.setContext(Qt.WidgetWithChildrenShortcut)
 
