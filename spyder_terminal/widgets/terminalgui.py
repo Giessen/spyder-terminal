@@ -134,7 +134,7 @@ class TermView(WebView):
         self.paste_action = create_action(self, _("Paste text"),
                                           icon=ima.icon('editpaste'),
                                           triggered=self.paste,
-                                          shortcut='Ctrl+Shift+V')
+                                          shortcut='Ctrl+V')
         if WEBENGINE:
             self.channel = QWebChannel(self.page())
             self.page().setWebChannel(self.channel)
@@ -211,7 +211,7 @@ class TermView(WebView):
                 return False
             elif sequence == 'Ctrl+Shift+C':
                 self.copy()
-            elif sequence == 'Ctrl+Shift+V':
+            elif sequence == 'Ctrl+V':
                 self.paste()
             event.accept()
             return True
